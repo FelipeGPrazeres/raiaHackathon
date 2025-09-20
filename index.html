@@ -6,10 +6,11 @@
     <title>Instagram Clone</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://unpkg.com/@google/generative-ai/dist/files/generative-ai.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <nav class="sidebar">
             <div class="logo">
                 <h2>Instagram</h2>
@@ -76,9 +77,7 @@
             </div>
         </nav>
 
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Stories Section -->
             <div class="stories-container">
                 <div class="stories-scroll">
                     <div class="story-item">
@@ -120,9 +119,7 @@
                 </div>
             </div>
 
-            <!-- Posts Feed -->
             <div class="posts-container">
-                <!-- Post 1 -->
                 <article class="post" data-post-id="1">
                     <header class="post-header">
                         <div class="post-user-info">
@@ -181,7 +178,6 @@
                     </div>
                 </article>
 
-                <!-- Post 2 -->
                 <article class="post" data-post-id="2">
                     <header class="post-header">
                         <div class="post-user-info">
@@ -239,7 +235,6 @@
                     </div>
                 </article>
 
-                <!-- Post 3 -->
                 <article class="post" data-post-id="3">
                     <header class="post-header">
                         <div class="post-user-info">
@@ -299,7 +294,6 @@
             </div>
         </main>
 
-        <!-- Right Sidebar -->
         <aside class="right-sidebar">
             <div class="user-profile">
                 <img src="https://picsum.photos/56/56?random=user" alt="Seu perfil" class="profile-pic">
@@ -377,6 +371,30 @@
         </aside>
     </div>
 
-    <script src="script.js"></script>
+    <button class="chatbot-fab">
+        <i class="fas fa-shield-alt"></i>
+    </button>
+
+    <div class="chatbot-popup">
+        <div class="chatbot-header">
+            <h3>Agente de Marca</h3>
+            <button class="chatbot-close-btn">&times;</button>
+        </div>
+        <div class="chatbot-body">
+            <div class="chat-message bot-message">
+                <p>Olá! Sou sua agente de marca. Como posso ajudar a verificar a autenticidade hoje?</p>
+            </div>
+            </div>
+        <div class="chatbot-footer">
+            <button class="chat-option-btn" id="verify-company">Verificar Empresa</button>
+            <button class="chat-option-btn" id="verify-page">Verificar Página</button>
+        </div>
+    </div>
+
+    <div class="scan-overlay">
+        <div class="scan-line"></div>
+    </div>
+
+    <script type="module" src="chatbot.js"></script>
 </body>
 </html>
